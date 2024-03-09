@@ -80,3 +80,9 @@ h1{
     font-weight: 400;
     font-size: 50px
 }
+h3{
+    font-weight: 600;
+}
+ol li h4{
+    text-decoration: underline;
+}
