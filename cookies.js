@@ -15,16 +15,19 @@ window.addEventListener("load", (event) => {
             .then((ip) => ip.trim());
   
           document.cookie = `date=${encodeURIComponent(date)}; loc=${encodeURIComponent(loc)}; ip=${encodeURIComponent(ip)}; path=/`;
+          return document.cookie
         },
         (error) => {
           console.log(`Error getting location: ${error.message}`);
           const loc = "Error: " + error.message;
           document.cookie = `date=${encodeURIComponent(date)}; loc=${encodeURIComponent(loc)}; ip=${encodeURIComponent("")}; path=/`;
+          
         }
       );
     } else {
       const loc = "Geolocation not supported";
       document.cookie = `date=${encodeURIComponent(date)}; loc=${encodeURIComponent(loc)}; ip=${encodeURIComponent("")}; path=/`;
+      return document.cookie
     }
   }
   
@@ -39,3 +42,4 @@ window.addEventListener("load", (event) => {
     }
     return null;
   }
+
