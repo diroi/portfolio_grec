@@ -83,3 +83,9 @@ h1{
 h3{
     font-weight: 600;
 }
+
+#texte{
+    margin-left:1cm;
+    margin-right: 1cm;
+    text-align: center;
+}
